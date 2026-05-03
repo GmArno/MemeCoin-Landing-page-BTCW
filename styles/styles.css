@@ -53,6 +53,17 @@ body {
   border-bottom: 2px solid #ff8c00;
 }
 
+.glass-navbar .navbar-brand {
+  font-size: 1.4rem; /* slightly smaller on all screens */
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Force brand + toggler on same line */
+.glass-navbar .navbar {
+  flex-wrap: nowrap;
+}
+
 
 .btn-success {
   background-color: #00ff9900;
@@ -70,6 +81,44 @@ body {
     
   
   } */
+@media (max-width: 768px) {
+  .glass-navbar .navbar-brand {
+    font-size: 1.2rem; /* smaller brand text on mobile */
+  }
+
+  /* Ensure toggler stays right */
+  .glass-navbar .navbar-toggler {
+    margin-left: auto;
+    flex-shrink: 0;
+    border-color: rgba(255, 140, 0, 0.5);
+    padding: 4px 8px;
+  }
+
+  /* Toggler icon color */
+  .glass-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,140,0,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* Dropdown menu full width, dark bg */
+  .glass-navbar .navbar-collapse {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 140, 0, 0.2);
+    padding: 10px 15px;
+    margin-top: 8px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* Stack nav links nicely */
+  .glass-navbar .nav-link {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+  }
+
+  .glass-navbar .nav-link:last-child {
+    border-bottom: none;
+  }
+}
 
 /* Hero Section */
 /* Hero Section */
