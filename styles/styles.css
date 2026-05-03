@@ -1,0 +1,702 @@
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+
+.up1{
+  transition: transform 0.3s ease-in-out;
+}
+
+.up1:hover{
+  transform: translateY(-5px);
+}
+
+.pide{
+  width: 10%; height: auto;
+}
+
+/* Navbar - Glassmorphism effect */
+.glass-navbar {
+  background: rgba(15, 15, 15, 0.062);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Brand Name */
+.navbar-brand {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: #ff8c00 !important; /* dark orange */
+  font-weight: 600;
+}
+
+/* Nav Links */
+.nav-link {
+  font-weight: 500;
+  color: #ff8c00 !important; /* dark orange */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  color: #ffa733 !important; /* slightly lighter orange on hover */
+  transform: translateY(-2px);
+}
+
+/* Optional: active link style */
+.nav-link.active {
+  color: #ffd280 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #ff8c00;
+}
+
+
+.btn-success {
+  background-color: #00ff9900;
+  border: 1px solid #bec041;
+  border-radius: 15px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  color: #fcf7f7 !important;
+
+}
+
+/* .btn-success:hover {
+    
+    
+    
+  
+  } */
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+/* Background Video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Content Styling */
+.hero-content {
+  z-index: 2;
+  padding: 100px 20px 60px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  background: #f7931a;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #ffa93d;
+}
+/* Hero Text Styling */
+.hero-title,
+.hero-subtitle {
+  color: #ff8c00; /* dark orange */
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.6),
+    -2px -2px 4px rgba(0,0,0,0.3);
+  -webkit-text-stroke: 1px #ffffff; /* white outline */
+  text-stroke: 1px #ffffff;
+  font-weight: 700;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Highlight Date */
+.highlight-date {
+  font-size: 2rem; /* bigger size */
+  font-weight: 800;
+  color: #ff8c00;
+  -webkit-text-stroke: 1.5px #ffffff;
+  text-stroke: 1.5px #ffffff;
+  text-shadow: 
+    3px 3px 5px rgba(0,0,0,0.7),
+    -2px -2px 4px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .highlight-date {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .highlight-date {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 80px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-content .btn {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Token & Link Section */
+.hero-links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Token CA Box */
+.token-address {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff8c00;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #ff8c00;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.token-address:hover {
+  background: rgba(255, 140, 0, 0.15);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: #ffa733;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  color: #fff;
+}
+
+/* Platform Icons */
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.platform-icons img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s, opacity 0.3s;
+  filter: drop-shadow(0 0 4px rgba(255, 140, 0, 0.4));
+}
+
+.platform-icons img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .platform-icons img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .token-address {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pB {
+  font-size: 25px;
+}
+
+.pH {
+  font-size: 17px;
+}
+
+.animate-fade {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-delay {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-fade-delay2 {
+  opacity: 0;
+  animation: fadeIn 1.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.animate-fade-delay3 {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+
+#countdown{
+  height: auto;
+  width: 25%;
+  border-top: 2px solid #28A745;
+  border-radius: 15px;
+  border-bottom: 2px solid #28A745;
+  background-color: #0000004a;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+
+
+/* Disclaimer background */
+.disclaimer-box {
+  background-color: #2a2d31;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Social Icon Styles */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #2a2d31;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #0cc48d;
+  color: #000;
+}
+
+
+.designed-by {
+  text-align: center;
+  margin-top: 20px;
+  /* Space above the "Designed by" section */
+  font-size: 12px !important;
+}
+
+.designer-logo {
+  height: 20px;
+  /* Adjust logo size */
+  vertical-align: middle;
+  width: 15% !important;
+  height: auto;
+}
+
+
+@media (max-width:768px) {
+
+  .pide{
+    width: 15% !important; 
+    height: auto;
+  }
+  
+
+  .hero-content {
+    padding-top: 0px !important
+  }
+
+
+  .designer-logo {
+    height: 20px;
+    /* Adjust logo size */
+    vertical-align: middle;
+    width: 57% !important;
+    height: auto;
+  }
+
+  .designer-logo {
+    height: 20px;
+    /* Adjust logo size */
+    vertical-align: middle;
+    width: 57% !important;
+    height: auto;
+  }
+
+  #non{
+    position: absolute;
+    top: 15% !important;
+    right: 21% !important;
+  }
+}
+
+
+#non{
+  position: absolute;
+  top: 17%;
+  right: 8%;
+}
+
+/* Bitcoin V1 Section */
+.bitcoin-v1 {
+  position: relative;
+  background: url('../images/aa.jpg') center center no-repeat;
+background-size: cover;
+
+  color: #ff8c00;
+  text-align: center;
+  padding: 120px 20px;
+  overflow: hidden;
+}
+
+.bitcoin-v1 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.bitcoin-v1-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1600px; /* expanded width */
+  margin: 0 auto;
+}
+
+.bitcoin-v1 h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+}
+
+.bitcoin-v1 p {
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  color: #ffb347;
+}
+
+/* Larger, centered video */
+.video-wrapper {
+  position: relative;
+  width: 90%;          /* wider view on PC */
+  max-width: 1280px;   /* supports large desktop displays */
+  margin: 0 auto;
+  padding-bottom: 50%; /* aspect ratio (16:9 = 56.25%) */
+  height: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(255, 140, 0, 0.3);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .video-wrapper {
+    width: 95%;
+    padding-bottom: 56.25%;
+  }
+
+  .bitcoin-v1 h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bitcoin-v1 {
+    padding: 80px 15px;
+  }
+
+  .bitcoin-v1 h2 {
+    font-size: 2rem;
+  }
+
+  .bitcoin-v1 p {
+    font-size: 1rem;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+}
+
+
+/* === Paper Image Section === */
+.paper-container {
+  position: relative;
+  z-index: 10; /* ensures it's above dark overlay */
+  text-align: center;
+}
+
+.paper-image {
+  position: relative;
+  z-index: 11;
+  animation: floatPaper 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: transform 0.5s ease, filter 0.5s ease;
+  max-width: 90%;
+  height: auto;
+}
+
+/* Floating Animation */
+@keyframes floatPaper {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+/* Hover Effect for desktop */
+@media (hover: hover) {
+  .paper-image:hover {
+    transform: scale(1.05) rotate(-2deg);
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+  }
+}
+
+/* Remove overlay effect behind the paper */
+#about-section::before {
+  background: none !important;
+}
+
+/* === Mobile Optimizations === */
+@media (max-width: 768px) {
+  .paper-image {
+    max-width: 85%;
+    margin: 0 auto;
+    animation: floatPaperMobile 8s ease-in-out infinite;
+  }
+
+  @keyframes floatPaperMobile {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.about-heading {
+  color: #ff9900 !important; /* Bitcoin orange */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* adds glow for contrast */
+}
+
+
+.btn-watch {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: 2px solid orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-watch:hover {
+  background-color: orange;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Show popup */
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Popup content */
+.popup-content {
+  background: #111;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: popupFade 0.5s ease-out;
+}
+
+/* Popup image */
+.popup-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Buy Now button */
+.popup-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background: #0cc48d;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+  background: #27a845;
+  transform: translateY(-3px);
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Fade animation */
+@keyframes popupFade {
+  from {transform: scale(0.8); opacity:0;}
+  to {transform: scale(1); opacity:1;}
+}
+
+/* Responsive */
+@media (max-width: 576px){
+  .popup-content { padding: 15px; }
+  .popup-btn { font-size: 1rem; padding: 10px 20px; }
+}

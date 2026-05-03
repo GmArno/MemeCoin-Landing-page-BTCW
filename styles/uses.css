@@ -1,0 +1,142 @@
+/* Uses Section */
+.uses {
+  position: relative;
+  background-image: url('../images/aa.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 60px 0;
+  z-index: 0; /* set base stacking context */
+  overflow: hidden;
+}
+
+/* Dark overlay effect */
+.uses::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity */
+  z-index: 0; /* stays behind everything */
+}
+
+/* Ensure content stays above overlay */
+.uses .container,
+.uses h2,
+.uses .card,
+.uses ul {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading styling */
+.uses h2 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #ff9900; /* Orange color for heading */
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* h3 title styling */
+.uses .card-title {
+  font-size: 1.8rem;
+  color: #ff9900; /* orange */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+  font-weight: 700;
+}
+
+/* round logo beside h3 text */
+.uses .card-title .title-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff9900;
+  background: rgba(255, 153, 0, 0.1);
+  padding: 4px;
+}
+
+
+/* Card Styling */
+.uses .card {
+  display: flex; /* keeps content in column */
+  flex-direction: column;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 255, 153, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+
+.uses .card:hover {
+  box-shadow: 0 15px 30px rgba(0, 255, 153, 0.15);
+}
+/* Card content */
+.uses .card-body {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+/* Title */
+.uses .card-title {
+  font-size: 1.8rem;
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+/* List Styling */
+.uses ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-left: 0;
+}
+
+.uses ul li {
+  list-style: none;
+  background-color: rgba(20, 20, 20, 0.9);
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.uses ul li strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .uses .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.uses .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: stretch; /* ensures all columns stretch to tallest card */
+}
+
+.uses .col-md-6 {
+  flex: 0 0 48%; /* slightly less than 50% to account for gap */
+  max-width: 48%;
+  display: flex;
+}
+
+.uses .col-md-6 .card {
+  flex: 1; /* makes the card take full height of column */
+  display: flex;
+  flex-direction: column;
+}

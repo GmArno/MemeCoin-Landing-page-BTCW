@@ -1,0 +1,95 @@
+/* Meme Chronicles Section */
+.meme-chronicles {
+  position: relative;
+  background-image: url('../images/aa.jpg'); /* same as previous style */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 60px 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+
+
+/* Ensure content stays above overlay */
+.meme-chronicles .container,
+.meme-chronicles h2,
+.meme-gallery {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.meme-heading {
+  color: #ff9900; /* Bitcoin orange */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Gallery Container */
+.meme-gallery {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image Track */
+.meme-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.meme-track::-webkit-scrollbar { display: none; }
+
+/* Meme Images */
+.meme-track img {
+  height: 300px;
+  border-radius: 15px;
+  flex-shrink: 0;
+  border: 2px solid #27a845;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 255, 153, 0.1);
+}
+.meme-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 255, 153, 0.25);
+  border-color: #0cc48d;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #0cc48d;
+  color: #fff;
+  font-size: 2rem;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+.scroll-btn:hover {
+  background: #0cc48d;
+  color: #000;
+}
+.left-btn { left: 10px; }
+.right-btn { right: 10px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .meme-track img {
+    height: 200px;
+  }
+  .scroll-btn {
+    font-size: 1.5rem;
+  }
+}

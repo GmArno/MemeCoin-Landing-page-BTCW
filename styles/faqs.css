@@ -1,0 +1,109 @@
+/* Community Section Background */
+#community-section {
+  position: relative;
+  background-image: url('../images/aa.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+#community-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+/* Ensure content above overlay */
+#community-section .container,
+#community-section .community-card,
+#community-section .banner-card {
+  position: relative;
+  z-index: 2;
+}
+
+/* Community Card */
+.community-card {
+  background: rgba(26,26,26,0.6);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 255, 153, 0.1);
+}
+
+/* Social logos */
+.community-card .social-logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Banner Card */
+.banner-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.banner-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay for Buy Now button */
+.banner-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.banner-overlay .btn {
+  pointer-events: auto;
+  background: #0cc48d;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.banner-overlay .btn:hover {
+  background: #27a845;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #community-section .row {
+    flex-direction: column;
+  }
+
+  .community-card, .banner-card {
+    margin-bottom: 30px;
+  }
+
+  .community-card .social-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .banner-overlay .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

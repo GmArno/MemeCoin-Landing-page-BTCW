@@ -1,0 +1,60 @@
+/* Token Utilities Section */
+.token-utilities {
+  background-image: url('../images/aa.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f0f0f0;
+}
+
+.utilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.utility-item {
+  background: rgba(33, 36, 41, 0.7);
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 255, 153, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(12, 196, 141, 0.4);
+}
+
+.utility-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 255, 153, 0.25);
+  border-color: #0cc48d;
+}
+
+.utility-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ff9900; /* Bitcoin orange */
+}
+
+.utility-item h4 {
+  color: #0cc48d;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.utility-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .utilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .utility-item {
+    padding: 25px 20px;
+  }
+}

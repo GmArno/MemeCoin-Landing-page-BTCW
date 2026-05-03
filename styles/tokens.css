@@ -1,0 +1,10 @@
+.address{
+    word-break: break-all !important;
+}
+
+.token-section{
+    background-image: url('../images/about3bg.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
